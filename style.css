@@ -1,0 +1,112 @@
+/* Global Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* Background will be set dynamically by JavaScript */
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition: background 5s ease-in-out; /* Smooth transition for background changes */
+}
+
+/* Optional texture overlay */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.container {
+  max-width: 850px;
+  margin: 60px auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.8rem;
+  color: #004e92;
+  margin-bottom: 30px;
+}
+
+input {
+  width: 65%;
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #0077cc;
+  box-shadow: 0 0 5px rgba(0,119,204,0.3);
+}
+
+button {
+  padding: 12px 25px;
+  margin-left: 10px;
+  background: linear-gradient(to right, #0077cc, #00aaff);
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(to right, #005fa3, #008ecc);
+}
+
+#results {
+  margin-top: 40px;
+  text-align: left;
+}
+
+/* Book Card Design */
+.book {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background-color: #ffffff;
+  padding: 18px;
+  margin: 15px 0;
+  border-left: 6px solid #0077cc;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.book:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.book-cover {
+  width: 80px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.book-details {
+  flex: 1;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.book-details strong {
+  color: #333;
+}
